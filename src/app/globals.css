@@ -1,26 +1,36 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base */
+  --background: #e8efff;      /* Azul pastel muito suave – ideal como BG */
+  --foreground: #ffffff;      /* Branco puro para superfícies e contraste */
+
+  /* Primária profunda */
+  --primary-color: #13233b;   /* Azul profundo elegante – perfeito para hero/nav */
+
+  /* Acentos roxos neon (AGORA vira acentos AZUIS) */
+  --accent-1: #2d6ae3;        /* Azul vibrante – botões primários/links */
+  --accent-2: #8bb6ff;        /* Azul suave luminoso – hover/realces */
+  --accent-3: #cfe0ff;        /* Azul muito claro – hover leve/cards */
+
+  /* Tons de preto futurista */
+  --black-soft: #121212;      /* Preto suave – fundo premium e tipografia forte */
+  --black-hard: #000000;      /* Preto absoluto – máximo contraste */
+
+  /* Cores auxiliares, para brilho LED */
+  --glow-purple: #a7c3ff;     /* Glow azul claro translúcido – sombras elegantes */
+  --glow-pink: #2d6ae380;     /* Glow azul vibrante translúcido (não rosa) */
+
+  --subtitle:1.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Roboto";
 }
