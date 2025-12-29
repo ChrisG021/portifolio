@@ -15,7 +15,6 @@ import './style.css';
 import Introduction from "@/components/introduction";
 import ContactPopup from "@/components/contactPopup";
 import ScrollPage from "@/components/scroll/scroll";
-import ThreeGallery from "@/components/gallery";
 import ContactSection from "@/components/contactSection";
 
 import Footer from "@/components/footer";
