@@ -10,7 +10,7 @@ export default function VsCodeComponent(){
     const [isTyping, setIsTyping] = useState(false);
     
     const inputRef = useRef(null);
-    const terminalRef = useRef(null);
+    const terminalRef = useRef<HTMLDivElement | null>(null);
 
     const commands = {
         help:()=>[
@@ -53,25 +53,23 @@ export default function VsCodeComponent(){
             return [];
         },
     };
-    const executeCommand= (cmd)=>{
+    const executeCommand = (cmd: any) => {
         const trimmed = cmd.trim().toLowerCase();
-        const [command,...args] = trimmed.split(' ');
 
-        if(command =="echo") {
-            return [args.join(' ')||''];
-        }
-        if(commands[command]){
-            //pegando comando e ligando o comando é isso
+        const command = trimmed as keyof typeof commands;
+
+        if (commands[command]) {
             return commands[command]();
         }
-        return [`command not found: ${command}. Type "help" for available commands.`]
-    }
 
-    const handleInputChange= (e)=>{
+        return [`command not found: ${command}. Type "help" for available commands.`]
+    };
+
+    const handleInputChange= (e:any)=>{
         setCurrentInput(e.target.value);
         
     };
-    const handleSubmit= (e)=>{
+    const handleSubmit= (e:any)=>{
         if(e&&e.preventDefault) e.preventDefault();
         if(!currentInput.trim()) return;
 
@@ -173,7 +171,7 @@ export default function VsCodeComponent(){
                 </div>
             </div>
 
-                <div className="absolute inset-0 bg-gradient-to-r from-purple-600/5 to-purple-600/5 rounded-2xl blur-xl -z-10"></div>
+                <div className="absolute inset-0 bg-linear-to-r from-purple-600/5 to-purple-600/5 rounded-2xl blur-xl -z-10"></div>
             </div>
 
         </div>  
