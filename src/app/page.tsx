@@ -35,8 +35,11 @@ export default function Home() {
     <div className="flex flex-col w-full max-md:gap-y-10">
 
       {/* home */}
-      <div className=" p-5 lg:p-8">
+      <div className=" p-5 lg:p-8" id="home">
+        {/* CHECK e responsivo */}
         <Header language={language} setLanguage={setLanguage} />
+
+        {/* CHECK e responsivo */}
         <Hero setCallPopup={setCallPopup} />
       </div>
 
@@ -45,7 +48,7 @@ export default function Home() {
       </div>
 
       {/* about/projects/ tecnologias */}
-      <div className="flex">
+      <div className="flex" id="about">
         <Swiper
           initialSlide={1}//segundo slide
           navigation={true}
@@ -69,15 +72,12 @@ export default function Home() {
         </Swiper>
       </div>
 
-      {/* <div>
-        <DevInvoicePage />
-      </div> */}
       <div className="w-full min-h-screen relative">
         <ScrollPage />
       </div>
 
       {/* Contato */}
-      <div>
+      <div id="contact">
         <ContactSection/>
       </div>
 

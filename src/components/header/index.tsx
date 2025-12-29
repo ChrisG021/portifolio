@@ -30,7 +30,7 @@ export default function Header({language,setLanguage}:HeaderProps) {
             </ul>
 
             {/*  onClick={() => setLanguage(toogleLanguage(language))} */}
-            <div className=" bounce-in-top flex language max-md:hidden">
+            <div className=" bounce-in-top flex language ">
                 <div className="language-item">
                     <CiGlobe className="language-icon" />
                 </div>
