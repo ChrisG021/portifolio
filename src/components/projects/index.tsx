@@ -13,7 +13,6 @@ export default function Projects(){
         return(
             <div className="flex  card flex-col bg-(--primary-color) text-(--accent-3) w-full h-full text-xs">
                     <div className="flex flex-row header-card">
-                        <img src="" alt="" />
                     </div>
 
                     <div className="flex flex-col justify-between px-4 py-3 h-full">
@@ -62,7 +61,7 @@ export default function Projects(){
                         /></div>
                         <div style={{"--i":4}as any} className="item">
                         <CardProjects 
-                        url=""
+                        url="https://portifolio-seven-omega-55.vercel.app/"
                         title="Portifolio" 
                         description="Portifolio de Christophe Guerra ,estudante de Ciência da Computação e desenvolvedor de software, focado em criar soluções modernas, funcionais e bem estruturadas, unindo front-end e back-end com boas práticas e aprendizado contínuo."
                         tech={["React","Next","Tailwind","CSS"]}
