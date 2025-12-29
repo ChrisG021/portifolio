@@ -89,7 +89,8 @@ export default function TextReveal({
     return () => clearInterval(interval);
   }, [isVisible, text, duration]);
 
-  const getAnimationClass = (index: number, variant: string) => {
+  type AnimationVariant = 'fade' | 'slideUp' | 'blur' | 'scale';
+  const getAnimationClass = (index: number, variant: AnimationVariant) => {
     const isRevealed = index < visibleChars;
     
     const baseClasses = 'inline-block transition-all';
