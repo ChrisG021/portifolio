@@ -18,7 +18,7 @@ export default function Header({language,setLanguage}:HeaderProps) {
     return (
         <nav className="flex justify-between  lg:h-[5vh]">
             <ul className="flex social-medias bounce-in-top">
-                <Link href={""} className="social-medias-items  animate-e">
+                <Link href={"https://www.instagram.com/chrislimah._/"} className="social-medias-items  animate-e">
                     <FaInstagram className="social-medias-icons" />
                 </Link>
                 <Link href={"https://github.com/ChrisG021"} className="social-medias-items  animate-m">
