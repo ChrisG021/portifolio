@@ -1,7 +1,7 @@
-// ContactSection.tsx
 'use client';
 
 import { useState } from 'react';
+import { saveContactMessage } from '@/services/contactService';
 import './style.css';
 
 export default function ContactSection() {
@@ -18,12 +18,22 @@ export default function ContactSection() {
     e.preventDefault();
     setStatus('sending');
     
-    // Simular envio
-    setTimeout(() => {
-      setStatus('success');
-      setFormData({ name: '', email: '', subject: '', message: '' });
+    try {
+      const result = await saveContactMessage(formData);
+      
+      if (result.success) {
+        setStatus('success');
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setStatus(''), 3000);
+      } else {
+        setStatus('error');
+        setTimeout(() => setStatus(''), 3000);
+      }
+    } catch (error) {
+      console.error('Erro ao enviar mensagem:', error);
+      setStatus('error');
       setTimeout(() => setStatus(''), 3000);
-    }, 1500);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -187,6 +197,7 @@ export default function ContactSection() {
               >
                 {status === 'sending' && 'Enviando...'}
                 {status === 'success' && 'Mensagem Enviada!'}
+                {status === 'error' && 'Erro ao enviar'}
                 {!status && 'Enviar Mensagem'}
               </button>
             </form>
