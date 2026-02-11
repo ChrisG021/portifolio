@@ -5,7 +5,7 @@ export interface ContactFormData {
     name: string;
     email: string;
     subject: string;
-    messaeg: string;
+    message: string;
 }
 
 export const saveContactMessage = async (data: ContactFormData) => {
