@@ -16,8 +16,7 @@ export default function Introduction() {
         </div>
     );
 
-    // ideia A : texto + 3/4 cards
-    // ideia B : NÃO TEMOS IDEIA B 
+
     return (
 
         <div className="flex flex-col introduction max-w-screen w-full  text-(--primary-color) justify-center items-center gap-20">
@@ -44,7 +43,7 @@ export default function Introduction() {
                         <div className="max-md:hidden">
                             <FaCircle />
                         </div>
-                        <Card title="Interfaces modernas e intuitiva" icon={<RiComputerLine className="text-xl" />} />
+                        <Card title="Interfaces modernas e intuitivas" icon={<RiComputerLine className="text-xl" />} />
                     </li>
                     <li data-aos="fade-right" data-aos-delay="400" data-aos-duration="800" className="lg:mr-9 z-2">
                         <Card title="Código limpo e organizado" icon={<GiMagicBroom className="text-xl" />} />
