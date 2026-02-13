@@ -60,7 +60,7 @@ export default function Projects(){
                         /></div>
                         <div style={{"--i":4}as any} className="item">
                         <CardProjects 
-                        url="https://portifolio-seven-omega-55.vercel.app/"
+                        url="https://www.christopheguerra.com"
                         title="Portifolio" 
                         description="Portifolio de Christophe Guerra ,estudante de Ciência da Computação e desenvolvedor de software, focado em criar soluções modernas, funcionais e bem estruturadas, unindo front-end e back-end com boas práticas e aprendizado contínuo."
                         tech={["React","Next","Tailwind","CSS"]}
